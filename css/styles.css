@@ -114,6 +114,10 @@ footer {
     color: #d25dd2;
 }
 
+.gallery_pictures, .gallery_videos {
+    padding: 1rem;
+}
+
 .payment_section {
     background-color: #5dd25d;
     color: #f4f4f4;
@@ -240,11 +244,10 @@ footer{
     .gallery_section {
         padding: 3rem;
     }
-    .carousel {
+    #carouselImages {
         max-height: 800px;
         max-height: calc(100vh - 8.6rem);
         overflow: hidden;
-        overflow-y: scroll;
     }
 }
 
