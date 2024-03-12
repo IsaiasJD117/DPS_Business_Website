@@ -1,0 +1,251 @@
+/* Base styles for mobile devices */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav,
+footer {
+    padding: 1rem;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 1030; /* Ensure it stays on top of other content */
+    background-color: #fff; /* Or any color you prefer */
+    box-shadow: 0 2px 4px rgba(0,0,0,.1); /* Optional: adds a slight shadow for depth */
+}
+
+.header_logo a, .header_links a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #5dd25d;
+}
+
+.header_logo a:hover, .header_links a:hover {
+    color: #d25dd2;
+}
+
+.header_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem; /* Adjust as needed */
+}
+
+.header_links {
+    display: none; /* Hide the links on mobile by default */
+}
+
+.header_sm {
+    display: block; /* Show the dropdown button on mobile */
+}
+
+.header_sm button, .header_sm a, .header_sm ul, .header_sm li {
+    background-color: #5dd25d;
+}
+
+.header_sm a {
+    text-align: center;
+}
+
+.header_sm button:hover, .header_sm button:focus, .header_sm button:active, .header_sm a:hover, .header_sm a:focus {
+    background-color: #d25dd2;
+}
+
+
+.hero_section {
+    margin-top: 5.5rem;
+    background-image: url('../assets/img/hero-background-image.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    color:#f4f4f4;
+}
+
+.hero_section h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero_section p h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.reviews_section, .gallery_section, .payment_section, .contact_section {
+    padding: 6rem 2rem 6rem 2rem;
+}
+
+.reviews_section h2, .gallery_section h2, .payment_section h2, .contact_section h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.reviews_section {
+    background-color: #5dd25d;
+    color: #f4f4f4;
+    
+}
+
+.reviews_link {
+    text-align: center;
+    display: block;
+    margin-top: 1rem;
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.reviews_link:hover, .reviews_link:focus {
+    color: #d25dd2;
+}
+
+.payment_section {
+    background-color: #5dd25d;
+    color: #f4f4f4;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 4rem;
+}
+
+h1, h2, h3, h4, p {
+    text-align: center;
+}
+
+.contact-phone-email {
+    text-align: center;
+}
+
+/* Grid, typography, buttons, forms can be styled here */
+
+/* General form styling */
+form {
+    max-width: 500px; /* Set the form's maximum width */
+    margin: 3rem auto; /* Center the form on the page */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light grey background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+form div {
+    margin-bottom: 15px; /* Space out form elements */
+}
+
+form label {
+    display: block; /* Ensure labels appear above inputs */
+    margin-bottom: 5px; /* Small space between label and input */
+    color: #333; /* Dark grey color for text */
+    font-size: 16px; /* Slightly larger font size for readability */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    width: 100%; /* Make inputs take up the full container width */
+    padding: 10px; /* Add some padding inside inputs */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded corners for inputs */
+    box-sizing: border-box; /* Ensure padding does not increase the size */
+}
+
+form textarea {
+    height: 150px; /* Set a fixed height for the textarea */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+form button[type="submit"] {
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #5dd25d; /* Bootstrap primary color for consistency */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Slightly rounded corners */
+    cursor: pointer; /* Change mouse cursor to indicate clickable */
+    font-size: 16px; /* Matching font size with labels */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+form button[type="submit"]:hover {
+    background-color: #d25dd2; /* Darken the button on hover for feedback */
+}
+
+footer{
+    padding: 0.5rem 1rem;
+    background-color: #f4f4f4;
+    text-align: center;
+    color: #333;
+    font-size: 0.8rem;
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+    /* Adjustments for tablets */
+    body {
+        font-size: 1.2rem;
+    }
+    .header {
+        padding-left: 1rem;
+    }
+    .header_content {
+        padding: 0rem;
+    }
+    .header_links {
+        display: flex; /* Show the links on desktop */
+        justify-content: flex-end; /* Align links to the far right */
+        list-style-type: none; /* Remove bullet points */
+        margin: 0;
+        padding: 0;
+    }
+
+    .header_link_wrapper {
+        margin-left: 20px; /* Space out the links */
+    }
+
+    .header_sm {
+        display: none; /* Hide the dropdown button on larger screens */
+    }
+
+    .hero_section {
+        margin-top: 8.6rem;
+        height: 75vh;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Adjustments for desktops */
+    body {
+        font-size: 1.4rem;
+    }
+
+    .hero_section {
+        margin-top: 6.3rem;
+        height: 80vh;
+    }
+    .gallery_section {
+        padding: 3rem;
+    }
+    .carousel {
+        max-height: 800px;
+        max-height: calc(100vh - 8.6rem);
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+}
+
+/* You can add more breakpoints as needed */
